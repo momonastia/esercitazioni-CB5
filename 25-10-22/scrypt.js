@@ -6,16 +6,17 @@ let userOper = prompt(
 
 let userNum1parsed = parseInt(userNum1);
 let userNum2parsed = parseInt(userNum2);
+let userOperLow = userOper.toLowerCase();
 
-if (userOper == "Addition") {
+if (userOperLow == "addition") {
   console.log(userNum1parsed + userNum2parsed);
-} else if (userOper == "Substraction") {
+} else if (userOperLow == "substraction") {
   console.log(userNum1parsed - userNum2parsed);
-} else if (userOper == "Division") {
+} else if (userOperLow == "division") {
   console.log(userNum1parsed / userNum2parsed);
-} else if (userOper == "Multiplication") {
+} else if (userOperLow == "multiplication") {
   console.log(userNum1parsed * userNum2parsed);
-} else if (userOper == "Modulo") {
+} else if (userOperLow == "modulo") {
   console.log(userNum1parsed % userNum2parsed);
 } else {
   console.log("Operation is invalid");
