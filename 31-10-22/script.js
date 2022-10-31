@@ -149,16 +149,24 @@ const productsForEach = products.forEach((element) =>
 // MAP
 
 const productFiltered = products.map((products) =>
-  console.log(products.title, products.price, products.rating.count)
+  console.log(
+    products.title,
+    "\n",
+    products.price,
+    "\n",
+    products.rating.count,
+    "\n",
+    "-------------------"
+  )
 );
 
-//MAP+FILTER (filtra i primi 5 elementi)
+//MAP+FILTER (filtra i prodotti con il prezzo inferiore a 600)
 
-const productsFirstFive = (element) => element.id < 5;
+const productsCheap = (element) => element.price < 600;
 products
-  .filter(productsFirstFive)
+  .filter(productsCheap)
   .map((products) =>
     console.log(products.title, products.price, products.rating.count)
   );
 
-/// productsFirstFive = (element) => element.id < 5 - callback function
+/// productsCheap = (element) => element.price < 600 - callback function
