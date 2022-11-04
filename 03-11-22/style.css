@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Domine&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Domine", sans-serif;
+}
+
+.logo {
+  width: 60px;
+  height: 30px;
+  padding-left: 20px;
+}
+
+.logo img {
+  width: 100%;
+}
+
+nav {
+  padding: 14px;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+}
+
+a {
+  color: rgb(5, 57, 102);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: white;
+  background-color: rgb(5, 57, 102);
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.hero-img,
+.banner-img {
+  width: 100vw;
+}
+
+.hero-img img,
+.banner-img img {
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero-title {
+  position: absolute;
+  top: 4px;
+  left: 40px;
+  width: 30vw;
+}
+
+h1 {
+  color: rgb(5, 57, 102);
+  font-size: 2vh;
+}
+
+p {
+  color: rgb(5, 57, 102);
+  font-size: 10px;
+}
+
+button {
+  background-color: rgb(5, 57, 102);
+  color: aliceblue;
+  width: 20vw;
+  height: 5vh;
+  border-radius: 30px;
+  border: none;
+}
+
+.cards-sales {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.img-div {
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.09);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 150px;
+  height: 200px;
+}
+
+.img-div-big {
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.09);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 250px;
+  height: 400px;
+}
+
+h4 {
+  text-align: center;
+}
+
+.cards-sales img {
+  width: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.banner {
+  position: relative;
+}
+
+.banner-title {
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  width: 30vw;
+}
+
+button:hover {
+  color: rgb(5, 57, 102);
+  background-color: aliceblue;
+}
+
+.subscribtionform {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribtionform h3 {
+  text-align: center;
+}
+
+.form1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 300px;
+  background-color: rgb(148, 205, 248);
+  border-radius: 5px;
+  margin: 30px;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.2);
+}
+
+#button1 {
+  height: 30px;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+}
+
+#button1:hover {
+  color: rgb(5, 57, 102);
+  background-color: white;
+  border: none;
+}
+
+#email {
+  height: 30px;
+  border: 0ch;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.09);
+  border-radius: 5px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  gap: 10px;
+}
+
+/* .adress,
+.information p,
+.myaccount p {
+  font-size: 10px;
+} */
+
+.socialicons ul {
+  display: flex;
+  justify-content: flex-start;
+  list-style-type: none;
+  padding-left: 0;
+  gap: 10px;
+}
+
+.icon {
+  width: 20px;
+  height: 20x;
+}
+
+.sales {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-title {
+    top: 70px;
+    left: 60px;
+    width: 40vw;
+  }
+
+  h1 {
+    font-size: 5vh;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  button {
+    width: 15vw;
+    height: 7vh;
+    border-radius: 30px;
+  }
+
+  .cards-sales {
+    flex-direction: row;
+  }
+
+  /*  .adress,
+  .information p,
+  .myaccount p {
+    font-size: 20px;
+  } */
+
+  .form1 {
+    height: 500px;
+    width: 800px;
+  }
+
+  #email {
+    width: 400px;
+    height: 50px;
+  }
+
+  #button1 {
+    width: 100px;
+    height: 50px;
+  }
+
+  footer {
+    justify-content: space-around;
+  }
+}

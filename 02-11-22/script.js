@@ -56,7 +56,7 @@ listFooter.appendChild(el3listFooter);
 
 /// CARDS (non ho finito questa parte)
 
-const createCard = (description, imgUrl) => {
+const createCard = (description, imgUrl, parent) => {
   const cardEl = document.createElement("div");
   // title
 
@@ -71,5 +71,7 @@ const createCard = (description, imgUrl) => {
 };
 
 console.log(
-  GirlImages.map((product) => createCard(product.description, product.image))
+  GirlImages.map((product) =>
+    createCard(product.description, product.image, hero)
+  )
 );
