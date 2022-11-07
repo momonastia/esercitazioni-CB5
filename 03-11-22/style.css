@@ -8,9 +8,8 @@ body {
 }
 
 .logo {
-  width: 60px;
+  width: 200px;
   height: 30px;
-  padding-left: 20px;
 }
 
 .logo img {
@@ -25,7 +24,8 @@ nav {
 
 nav ul {
   display: flex;
-  gap: 20px;
+  align-items: center;
+  gap: 30px;
   list-style-type: none;
 }
 
@@ -36,10 +36,20 @@ a {
 
 nav a:hover {
   color: white;
-  background-color: rgb(5, 57, 102);
+  background-color: rgb(175, 149, 123);
   border: none;
-  padding: 5px;
-  border-radius: 5px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.login-menu:hover {
+  cursor: pointer;
+  color: white;
+  background-color: rgb(175, 149, 123);
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  transition: all 0.75s;
 }
 
 .hero-img,
@@ -58,36 +68,48 @@ nav a:hover {
 
 .hero-title {
   position: absolute;
-  top: 4px;
-  left: 40px;
+  top: 10px;
+  right: 40px;
   width: 30vw;
 }
 
 h1 {
-  color: rgb(5, 57, 102);
-  font-size: 2vh;
+  color: aliceblue;
+  font-size: 3vh;
 }
 
-p {
-  color: rgb(5, 57, 102);
+h2 {
+  color: rgb(96, 81, 66);
+}
+
+.hero-title p,
+.banner-title p,
+footer p {
+  color: aliceblue;
   font-size: 10px;
 }
 
 button {
-  background-color: rgb(5, 57, 102);
+  background-color: rgb(175, 149, 123);
   color: aliceblue;
   width: 20vw;
   height: 5vh;
   border-radius: 30px;
   border: none;
+  margin-top: 5px;
 }
 
 .cards-sales {
+  background-color: rgb(206, 184, 161);
+  width: 100vw;
+  overflow: auto;
+  scroll-behavior: smooth;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
   gap: 20px;
+  padding: 20px;
+  margin-left: 40px;
 }
 
 .img-div {
@@ -105,11 +127,11 @@ button {
 .img-div-big {
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.09);
   border-radius: 10px;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 10px;
+  justify-content: center; */
+  /* padding: 10px; */
   width: 250px;
   height: 400px;
 }
@@ -130,14 +152,25 @@ h4 {
 
 .banner-title {
   position: absolute;
-  top: 10px;
-  left: 40px;
+  top: 40px;
+  left: 90px;
   width: 30vw;
 }
 
+.banner-title h1,
+.banner-title p {
+  color: rgb(188, 162, 135);
+}
+
+.banner-img img {
+  height: 200px;
+  object-fit: cover;
+}
+
 button:hover {
-  color: rgb(5, 57, 102);
+  color: rgb(175, 149, 123);
   background-color: aliceblue;
+  border-radius: 20px;
 }
 
 .subscribtionform {
@@ -150,6 +183,7 @@ button:hover {
 
 .subscribtionform h3 {
   text-align: center;
+  color: rgb(96, 81, 66);
 }
 
 .form1 {
@@ -158,8 +192,8 @@ button:hover {
   align-items: center;
   height: 100px;
   width: 300px;
-  background-color: rgb(148, 205, 248);
-  border-radius: 5px;
+  background-color: rgb(227, 206, 184);
+  border-radius: 20px;
   margin: 30px;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.2);
 }
@@ -189,13 +223,9 @@ footer {
   justify-content: space-between;
   padding: 10px;
   gap: 10px;
+  background-color: rgb(96, 81, 66);
+  margin-top: 0;
 }
-
-/* .adress,
-.information p,
-.myaccount p {
-  font-size: 10px;
-} */
 
 .socialicons ul {
   display: flex;
@@ -221,10 +251,95 @@ footer {
   justify-content: center;
 }
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+
+.modal-content {
+  position: relative;
+  margin-top: 30vh;
+  margin-left: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  background-color: rgb(126, 104, 82);
+  border-radius: 50px;
+  width: 200px;
+  color: aliceblue;
+  padding-bottom: 20px;
+  opacity: 1;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.username,
+.password {
+  background-color: rgb(175, 149, 123);
+  color: aliceblue;
+  height: 30px;
+  border-radius: 30px;
+  border: none;
+  width: 150px;
+  height: 35px;
+}
+
+.login-btn {
+  background-color: rgb(175, 149, 123);
+  color: aliceblue;
+  border: none;
+  border-radius: 30px;
+  width: 100px;
+  height: 40px;
+}
+
+.close-modal-btn {
+  position: absolute;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  border: none;
+  font-weight: bold;
+  top: 5px;
+  right: -15px;
+}
+
+.close-modal-btn:hover {
+  background-color: transparent;
+  color: aliceblue;
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: rgb(96, 81, 66);
+  font-family: "Domine", sans-serif;
+  padding-left: 20px;
+}
+
 @media only screen and (min-width: 768px) {
+  .logo {
+    height: 30px;
+  }
+
+  .logo img {
+    height: 80px;
+    object-fit: contain;
+  }
+
   .hero-title {
     top: 70px;
-    left: 60px;
+    right: 60px;
     width: 40vw;
   }
 
@@ -246,15 +361,15 @@ footer {
     flex-direction: row;
   }
 
-  /*  .adress,
-  .information p,
-  .myaccount p {
-    font-size: 20px;
-  } */
-
   .form1 {
     height: 500px;
     width: 800px;
+  }
+
+  .banner-title {
+    top: 20px;
+    left: 250px;
+    width: 30vw;
   }
 
   #email {
@@ -269,5 +384,20 @@ footer {
 
   footer {
     justify-content: space-around;
+  }
+
+  .modal-content {
+    width: 400px;
+  }
+
+  .username,
+  .password {
+    background-color: #999999;
+    color: aliceblue;
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+    width: 300px;
+    height: 35px;
   }
 }

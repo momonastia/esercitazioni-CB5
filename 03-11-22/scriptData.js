@@ -1,27 +1,31 @@
 const GirlImages = [
   {
-    description: "Sleek Metal Bacon",
+    description: "Chair Belfast",
     image: "https://api.lorem.space/image/furniture?w=640&h=480&r=8361",
   },
   {
-    description: "Refined Fresh Shoes",
-    image: "https://api.lorem.space/image/shoes?w=640&h=480&r=1865",
+    description: "Sofa Napoleon",
+    image: "https://api.lorem.space/image/furniture?w=640&h=480&hash=500B67FB",
   },
   {
-    description: "Sleek Steel Car",
-    image: "https://api.lorem.space/image?w=640&h=480&r=7941",
+    description: "Armchair Elisabeth",
+    image: "https://api.lorem.space/image/furniture?w=640&h=480&hash=B0E33EF4",
   },
   {
-    description: "Ergonomic Steel Tuna",
-    image: "https://api.lorem.space/image?w=640&h=480&r=5350",
+    description: "Sofa-bed Churchill",
+    image: "https://api.lorem.space/image/furniture?w=640&h=480&hash=7F5AE56A",
   },
   {
-    description: "Practical Plastic Salad",
-    image: "https://api.lorem.space/image/shoes?w=640&h=480&r=6283",
+    description: "Couch George",
+    image: "https://api.lorem.space/image/furniture?w=640&h=480&hash=4F32C4CF",
   },
   {
-    description: "Unbranded Granite Shoes",
-    image: "https://api.lorem.space/image/fashion?w=640&h=480&r=5631",
+    description: "Chair Arthur",
+    image: "https://api.lorem.space/image/furniture?w=640&h=480&hash=8B7BCDC2",
+  },
+  {
+    description: "Sofa York",
+    image: "https://api.lorem.space/image/furniture?w=640&h=480&hash=2D297A22",
   },
 ];
 

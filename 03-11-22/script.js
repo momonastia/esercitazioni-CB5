@@ -24,7 +24,7 @@ const createCard = (description, imgUrl, parent) => {
 
 ///Titolo deals-section
 const titleMainDeals = document.createElement("h2");
-titleMainDeals.textContent = "Get Up to 80% OFF";
+titleMainDeals.textContent = "Get up to 80% OFF";
 
 const dealsCards = document.createElement("div");
 dealsCards.setAttribute("class", "cards-sales");
@@ -36,10 +36,25 @@ GirlImages.map((product) =>
   createCard(product.description, product.image, dealsCards)
 );
 
-///Non funziona, non ho avuto tempo di finire ↓
-/* 
-GirlImages.forEach((imgDiv) => {
-  imgDiv.addEventListener("click", () =>
-    imgDiv.classList.toggle("img-div-big")
-  );
-}); */
+/// Card expansion onclick (not finished)
+
+const card = document.querySelectorAll(".img-div");
+card.forEach((card) => {
+  card.addEventListener("click", () => card.classList.toggle("img-div-big"));
+});
+
+/// Modal window opening
+
+const loginMenuEl = document.querySelector(".login-menu");
+const modalEl = document.querySelector(".modal");
+loginMenuEl.addEventListener(
+  "click",
+  () => (modalEl.style = "display: block;")
+);
+
+/// Modal window closing
+const closModalBtnEl = document.querySelector(".close-modal-btn");
+closModalBtnEl.addEventListener(
+  "click",
+  () => (modalEl.style = "display: none;")
+);
