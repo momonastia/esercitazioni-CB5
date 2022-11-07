@@ -122,6 +122,7 @@ button {
   padding: 10px;
   width: 150px;
   height: 200px;
+  width: 100%;
 }
 
 .img-div-big {
@@ -174,6 +175,7 @@ button:hover {
 }
 
 .subscribtionform {
+  border: 5px solid salmon;
   height: 200px;
   display: flex;
   flex-direction: column;
@@ -264,7 +266,7 @@ footer {
 .modal-content {
   position: relative;
   margin-top: 30vh;
-  margin-left: 30vw;
+  margin-left: 24vw;
   display: flex;
   flex-direction: column;
   align-items: center;
