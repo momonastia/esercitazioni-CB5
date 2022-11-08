@@ -18,7 +18,7 @@ fetch("https://jsonplaceholder.typicode.com/todos")
   .then((res) => res.json())
   .then((todos) =>
     todos.map((todo) =>
-      console.log("ID: " + todo.id, "\n", "Title: " + todo.title)
+      console.log("ID: " + todo.id, "\n", "Te34tle: " + todo.title)
     )
   )
   .catch((e) => console.log("error:" + e))
