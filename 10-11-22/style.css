@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Domine&display=swap");
+
+:root {
+  --lightblue: #32b6a2;
+  --blue: rgb(41, 60, 77);
+  --grey: rgb(56, 71, 90);
+  --white: rgb(255, 255, 255);
+}
+
+body {
+  background-color: var(--blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Domine", sans-serif;
+}
+
+.main {
+  margin-top: 140px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  width: 260px;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--grey);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* Title color */
+
+h4 {
+  color: var(--lightblue);
+}
+
+/* Advice text */
+
+.advice {
+  text-align: center;
+  color: var(--white);
+  font-size: 20px;
+}
+
+.button {
+  position: relative;
+  top: -30px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--lightblue);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 20px;
+}
+
+.button:hover {
+  box-shadow: 0 0 15px 4px rgb(67, 233, 233, 1);
+}
+
+@media (min-width: 1025px) {
+  .card {
+    width: 300px;
+    height: 300px;
+  }
+
+  .advice {
+    font-size: 24px;
+  }
+}
