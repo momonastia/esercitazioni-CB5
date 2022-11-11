@@ -15,6 +15,14 @@ body {
   font-family: "Domine", sans-serif;
 }
 
+.loader {
+  opacity: 0;
+}
+
+.active {
+  opacity: 1;
+}
+
 .main {
   margin-top: 140px;
   position: absolute;

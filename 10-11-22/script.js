@@ -2,6 +2,8 @@ const btn = document.querySelector(".button");
 const advice = document.querySelector(".advice");
 const urlAdvice = "https://api.adviceslip.com/advice";
 const advTitleEl = document.querySelector(".advise-title");
+const loadEl = document.querySelector(".loader");
+loadEl.classList.add = "active";
 
 /**
  * Get data from the end point
@@ -9,6 +11,7 @@ const advTitleEl = document.querySelector(".advise-title");
  * @param {string} url
  */
 const getAdvice = (URL) => {
+  loadEl.classList.remove = "active";
   fetch(URL, { cache: "no-cache" })
     .then((res) => res.json())
     .then(
