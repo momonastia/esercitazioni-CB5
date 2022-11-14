@@ -39,8 +39,6 @@ let page = 1;
 /* Loader */
 
 const loadEl = document.querySelector(".lds-roller");
-/* loadEl.style.opacity = "0"; */
-/* non ci sono riuscita a finire il loader - non ho capito dove viene messo */
 
 /**
  * It takes a number, and returns a promise that resolves to a JSON object containing the data for that
@@ -59,12 +57,14 @@ const addPost = (post) => createCard(post.title, post.id, post.body, mainDiv);
  * @param newPage - The new page number to update to.
  */
 const updatePage = (newPage) => {
+  loadEl.style.opacity = "1"; /// showing loader
   /* Checking if the newPage is greater than 0 and less than or equal to the limit. */
   if (newPage > 0 && newPage <= LIMIT) {
     getPost(newPage)
       .then(addPost)
       .then(() => (page = newPage));
   }
+  loadEl.style.opacity = "0"; /// hiding loader
 };
 
 btnNext.addEventListener("click", () => updatePage(page + 1));
