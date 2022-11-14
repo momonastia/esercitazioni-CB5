@@ -4,6 +4,9 @@ const createCard = (title, ID, bodyCard, parent) => {
   /*  cardEl.classList.add(type); */
   // title for each card
 
+  const titleIdEl = document.createElement("div");
+  titleIdEl.setAttribute("class", "title-id");
+
   const titleEl = document.createElement("h3");
   titleEl.textContent = title;
 
@@ -17,8 +20,8 @@ const createCard = (title, ID, bodyCard, parent) => {
   bodyCardEl.setAttribute("class", "body-card");
 
   // appending
-  cardEl.append(titleEl, idEl, bodyCardEl);
-  /* imgDiv.append(imgEl); */
+  cardEl.append(titleIdEl, bodyCardEl);
+  titleIdEl.append(titleEl, idEl);
   parent.innerHTML = "";
   parent.appendChild(cardEl);
 };
@@ -32,6 +35,12 @@ const btnNext = document.querySelector(".btn-next");
 
 const LIMIT = 10;
 let page = 1;
+
+/* Loader */
+
+const loadEl = document.querySelector(".lds-roller");
+/* loadEl.style.opacity = "0"; */
+/* non ci sono riuscita a finire il loader - non ho capito dove viene messo */
 
 /**
  * It takes a number, and returns a promise that resolves to a JSON object containing the data for that
