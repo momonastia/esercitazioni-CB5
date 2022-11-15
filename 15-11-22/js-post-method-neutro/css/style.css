@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin&family=Domine&family=Kanit:wght@300&display=swap");
+
+html {
+  background: linear-gradient(
+    90deg,
+    rgba(111, 78, 135, 0.223) 0%,
+    rgba(208, 179, 74, 0.164) 100%
+  );
+  font-family: "Cabin", sans-serif;
+  font-family: "Domine", serif;
+  font-family: "Kanit", sans-serif;
+  color: rgb(138, 77, 135);
+}
+
+h1 {
+  text-align: center;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-field {
+  border: none;
+  border-radius: 10px;
+  width: 150px;
+  height: 40px;
+}
+
+.submit-field {
+  border: none;
+  border-radius: 10px;
+  width: 80px;
+  height: 40px;
+  background-color: rgb(100, 55, 93);
+  color: aliceblue;
+  font-size: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+.lista {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  border: 2px solid rgb(100, 55, 93);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+  width: 250px;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+
+  font-family: "Cabin", sans-serif;
+}
+
+.submit-field {
+  font-family: "Cabin", sans-serif;
+}
+
+.main-div {
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 0 15px 4px rgba(116, 42, 91, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-placeholder {
+  border-radius: 10px;
+  background-color: rgb(84, 58, 82);
+  width: 70px;
+  height: 70px;
+}

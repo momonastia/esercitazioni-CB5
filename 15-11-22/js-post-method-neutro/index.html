@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href=".//css/style.css" />
+  </head>
+  <body>
+    <h1>Inserisci pokemon</h1>
+    <form class="input-form" name="pokemon">
+      <input
+        type="text"
+        name="pkmName"
+        class="input-field"
+        placeholder=" Nome"
+      />
+      <input
+        type="text"
+        name="pkmType"
+        class="input-field"
+        placeholder=" Tipo"
+      />
+      <input type="submit" class="submit-field" value="Invia" />
+    </form>
+    <div class="lista">
+      <h2>Lista pokemon</h2>
+      <div class="main-div"></div>
+      <ul class="pokemonList"></ul>
+    </div>
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/utils.js"></script>
+  </body>
+</html>
