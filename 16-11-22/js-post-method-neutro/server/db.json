@@ -1,0 +1,19 @@
+{
+  "pokemon": [
+    {
+      "id": 1,
+      "name": "Bulbasarur",
+      "type": "grass"
+    },
+    {
+      "id": 2,
+      "name": "Ivysaur",
+      "type": "grass"
+    },
+    {
+      "id": "d8e214b8-f06d-48f8-a133-9842a87242e1",
+      "name": "Testosaur",
+      "type": "Fuoco"
+    }
+  ]
+}
