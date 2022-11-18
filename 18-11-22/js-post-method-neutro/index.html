@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href=".//css/style.css" />
+  </head>
+  <body>
+    <form class="input-form" name="pokemon">
+      <div class="logo">
+        <img src="./css/pokemon-logo-png-0.png" alt="logo" />
+      </div>
+      <div class="bulba">
+        <img src="https://i.gifer.com/WnES.gif" alt="logo" />
+      </div>
+      <input
+        type="text"
+        name="pkmName"
+        class="input-field"
+        placeholder=" Nome"
+      />
+      <input
+        type="text"
+        name="pkmType"
+        class="input-field"
+        placeholder=" Tipo"
+      />
+      <input type="submit" class="submit-field" value="Invia" />
+    </form>
+    <form class="edit-form" name="editForm">
+      <input type="text" name="id" class="input-field" placeholder=" ID" />
+      <input type="text" name="name" class="input-field" placeholder=" Nome" />
+      <input type="text" name="type" class="input-field" placeholder=" Tipo" />
+      <input type="submit" class="submit-field" value="Edit" />
+    </form>
+    <div class="lista">
+      <h2>Lista pokemon</h2>
+      <h4>One click for editing, double click for deleting</h4>
+      <form class="search-form">
+        <input
+          class="input-field"
+          type="text"
+          placeholder=" Search a pokemon..."
+        />
+      </form>
+      <div class="main-div"></div>
+      <ul class="pokemonList"></ul>
+    </div>
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/utils.js"></script>
+    <script type="module" src="./js/api.js"></script>
+  </body>
+</html>

@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin&family=Domine&family=Kanit:wght@300&display=swap");
+
+:root {
+  --lightblue: #265afd;
+  --blue: #15339a;
+  --yellow: #ffcd02;
+}
+
+html {
+  background-image: url("https://www.wallpaperuse.com/wallp/0-1204_m.jpg");
+  background-position: center;
+  background-size: cover;
+  font-family: "Pokemon Solid", sans-serif;
+  font-family: "Domine", serif;
+  font-family: "Kanit", sans-serif;
+  color: var(--yellow);
+}
+
+.logo {
+  width: 200px;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.bulba {
+  width: 50px;
+}
+
+.logo img,
+.bulba img {
+  width: 100%;
+}
+
+.input-form,
+.edit-form,
+.search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.input-field {
+  border: none;
+  border-radius: 10px;
+  width: 150px;
+  height: 40px;
+  background-color: var(--yellow);
+  box-shadow: 0 0 15px 4px rgba(224, 224, 224, 0.5);
+}
+
+.submit-field {
+  border: none;
+  border-radius: 10px;
+  width: 80px;
+  height: 60px;
+  background-color: var(--blue);
+  color: var(--yellow);
+  font-size: 20px;
+  font-family: "Pokemon Hollow";
+}
+
+.submit-field:hover {
+  cursor: pointer;
+  background-color: var(--lightblue);
+  box-shadow: 0 0 15px 4px rgba(224, 224, 224, 0.5);
+  font-family: "Pokemon Solid";
+}
+
+ul {
+  list-style: none;
+}
+
+.lista {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  border: 2px solid rgb(151, 234, 239);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+  width: 250px;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+
+  font-family: "Cabin", sans-serif;
+}
+
+.main-div {
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-family: "Pokemon Hollow";
+}
+
+h4 {
+  background-color: var(--lightblue);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 0 15px 4px rgba(224, 224, 224, 0.3);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--yellow);
+  color: var(--blue);
+}
+
+.card:hover {
+  background-color: #ffd630;
+  color: var(--lightblue);
+  cursor: pointer;
+  box-shadow: 0 0 15px 4px rgba(224, 224, 224, 0.5);
+}
+
+.img-placeholder {
+  border-radius: 10px;
+  background-color: var(--lightblue);
+  width: 70px;
+  height: 70px;
+}
+
+@media only screen and (min-width: 768px) {
+  html {
+    background-image: url("https://www.wallpaperuse.com/wallp/0-1204_m.jpg");
+  }
+}
+
+@font-face {
+  font-family: "Pokemon Hollow";
+  src: url("../fonts/Pokemon\ Hollow.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Pokemon Solid";
+  src: url("../fonts/Pokemon\ Solid.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}

@@ -1,0 +1,24 @@
+{
+  "pokemon": [
+    {
+      "id": "6a801403-292f-40c8-aa8b-be815ae0d37b",
+      "name": "Venusaur",
+      "type": "Fuoco"
+    },
+    {
+      "id": "707c3c59-31ad-4fa4-91f8-d15eee56e39a",
+      "name": "Ivysaur",
+      "type": "Normal"
+    },
+    {
+      "id": "8a5850e4-03e0-4d1c-bf12-88a87f6ea040",
+      "name": "Testosaur",
+      "type": "Fuoco"
+    },
+    {
+      "id": "15bc233c-50d5-457e-a552-90932551580b",
+      "name": "Picachu",
+      "type": "Fight"
+    }
+  ]
+}
