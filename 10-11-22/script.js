@@ -3,7 +3,7 @@ const advice = document.querySelector(".advice");
 const urlAdvice = "https://api.adviceslip.com/advice";
 const advTitleEl = document.querySelector(".advise-title");
 const loadEl = document.querySelector(".loader");
-loadEl.classList.add = "active";
+/* loadEl.classList.add = "active"; */
 
 /**
  * Get data from the end point
@@ -11,7 +11,7 @@ loadEl.classList.add = "active";
  * @param {string} url
  */
 const getAdvice = (URL) => {
-  loadEl.classList.remove = "active";
+  loadEl.style.opacity = 1;
   fetch(URL, { cache: "no-cache" })
     .then((res) => res.json())
     .then(
@@ -19,7 +19,8 @@ const getAdvice = (URL) => {
         (advice.innerHTML = res.slip.advice) +
         (advTitleEl.textContent = "ADVICE #" + res.slip.id)
     )
-    .catch((e) => console.log("Error:" + e));
+    .catch((e) => console.log("Error:" + e))
+    .finally(() => (loadEl.style.opacity = 0));
 };
 
 /**
