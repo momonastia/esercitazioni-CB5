@@ -40,15 +40,15 @@ const createCardEl = (data, parent) => {
 
 GET(BASE_URL).then((data) => {
   productsList = data.filter((product) => product.id <= 10);
+  productsList.map((product) => createCardEl(product, cardList));
+  console.log(productsList);
 });
-
-console.log(productsList);
 
 inputEl.addEventListener("change", (e) => {
   inputValue = "";
   inputValue += e.target.value;
   /* console.log(inputValue); */
-
+  cardList.replaceChildren();
   const filteredByInput = productsList.filter((product) =>
     product.title.includes(inputValue)
   );
