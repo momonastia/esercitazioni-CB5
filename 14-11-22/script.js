@@ -45,10 +45,12 @@ const loadEl = document.querySelector(".lds-roller");
  * post
  * @param num - The number of the post you want to fetch.
  */
-const getPost = (num) =>
-  fetch(`https://jsonplaceholder.typicode.com/posts/${num}`).then((res) =>
-    res.json()
-  );
+const getPost = (num) => {
+  loadEl.style.opacity = 1;
+  fetch(`https://jsonplaceholder.typicode.com/posts/${num}`)
+    .then((res) => res.json())
+    .finally(() => (loadEl.style.opacity = 0));
+};
 
 const addPost = (post) => createCard(post.title, post.id, post.body, mainDiv);
 
@@ -57,14 +59,14 @@ const addPost = (post) => createCard(post.title, post.id, post.body, mainDiv);
  * @param newPage - The new page number to update to.
  */
 const updatePage = (newPage) => {
-  loadEl.style.opacity = "1"; /// showing loader
+  /* loadEl.style.opacity = "1"; /// showing loader */
   /* Checking if the newPage is greater than 0 and less than or equal to the limit. */
   if (newPage > 0 && newPage <= LIMIT) {
     getPost(newPage)
       .then(addPost)
       .then(() => (page = newPage));
   }
-  loadEl.style.opacity = "0"; /// hiding loader
+  /*  loadEl.style.opacity = "0"; /// hiding loader */
 };
 
 btnNext.addEventListener("click", () => updatePage(page + 1));
