@@ -7,30 +7,100 @@ body {
   font-family: "Domine", sans-serif;
 }
 
+body.active {
+  overflow: hidden;
+}
+
+/* HEADER and menu-btm  */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.menu-btn {
+  width: 30px;
+  height: 40px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+.menu-btn span {
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(154, 133, 112);
+  transition: all 0.5s;
+}
+.menu-btn span:nth-of-type(2) {
+  top: calc(50% - 5px);
+}
+.menu-btn span:nth-of-type(3) {
+  top: calc(50% + 5px);
+}
+
+/* Меняем гамбургер иконку, когда меню открыто */
+.menu-btn.active span:nth-of-type(1) {
+  display: none;
+}
+.menu-btn.active span:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(45deg);
+}
+.menu-btn.active span:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(-45deg);
+}
+
+/* Logo */
+
 .logo {
   width: 200px;
-  height: 30px;
+  height: fit-content;
 }
 
 .logo img {
   width: 100%;
 }
 
-nav {
-  padding: 14px;
-  display: flex;
-  justify-content: space-around;
+/* Menu */
+
+.menu {
+  opacity: 0;
+  top: 150px;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  transform: translateX(100%);
+  transition: all 1s;
+  position: fixed;
+  padding-top: 50px;
+}
+
+.menu.active {
+  opacity: 0.9;
+  transform: translateX(0);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 10000;
+  background-color: white;
 }
 
 nav ul {
   display: flex;
   align-items: center;
   gap: 30px;
+  flex-direction: column;
   list-style-type: none;
 }
 
 a {
-  color: rgb(5, 57, 102);
+  color: rgb(154, 133, 112);
   text-decoration: none;
 }
 
@@ -40,6 +110,7 @@ nav a:hover {
   border: none;
   padding: 10px;
   border-radius: 20px;
+  transition: all 0.75s;
 }
 
 .login-menu:hover {
@@ -52,9 +123,11 @@ nav a:hover {
   transition: all 0.75s;
 }
 
+/* Hero */
+
 .hero-img,
 .banner-img {
-  width: 100vw;
+  width: 100%;
 }
 
 .hero-img img,
@@ -99,9 +172,11 @@ button {
   margin-top: 5px;
 }
 
+/* Cards */
+
 .cards-sales {
   background-color: rgb(206, 184, 161);
-  width: 100vw;
+  width: 100%;
   overflow: auto;
   scroll-behavior: smooth;
   display: flex;
@@ -109,7 +184,8 @@ button {
   justify-content: flex-start;
   gap: 20px;
   padding: 20px;
-  margin-left: 40px;
+  /*  margin-left: 40px;  */
+  box-sizing: border-box;
 }
 
 .img-div {
@@ -175,7 +251,6 @@ button:hover {
 }
 
 .subscribtionform {
-  border: 5px solid salmon;
   height: 200px;
   display: flex;
   flex-direction: column;
@@ -253,6 +328,16 @@ footer {
   justify-content: center;
 }
 
+.background-grey-all-window {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -313,11 +398,12 @@ footer {
   border: none;
   font-weight: bold;
   top: 5px;
-  right: -15px;
+  right: -60px;
 }
 
 .close-modal-btn:hover {
   background-color: transparent;
+  color: rgb(255, 0, 0);
   color: aliceblue;
   cursor: pointer;
 }
@@ -330,10 +416,6 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
-  .logo {
-    height: 30px;
-  }
-
   .logo img {
     height: 80px;
     object-fit: contain;
@@ -341,7 +423,7 @@ footer {
 
   .hero-title {
     top: 70px;
-    right: 60px;
+    right: 190px;
     width: 40vw;
   }
 

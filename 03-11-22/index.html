@@ -8,25 +8,34 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <nav>
+    <header>
       <div class="logo">
         <img src="./logo.png.png" alt="" />
       </div>
-      <ul>
-        <li>
-          <a href="http://">Home</a>
-        </li>
-        <li>
-          <a href="http://">Collections</a>
-        </li>
-        <li>
-          <a href="http://">Deals</a>
-        </li>
-        <li>
-          <p class="login-menu">Login</p>
-        </li>
-      </ul>
-    </nav>
+      <div class="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+    <div class="menu">
+      <nav>
+        <ul>
+          <li>
+            <a href="http://">HOME</a>
+          </li>
+          <li>
+            <a href="http://">COLLECTIONS</a>
+          </li>
+          <li>
+            <a href="http://">DEALS</a>
+          </li>
+          <li>
+            <a class="login-menu">LOGIN</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <main>
       <div class="hero">
         <div class="hero-title">
@@ -69,60 +78,76 @@
         </div>
       </div>
       <div class="modal">
-       <div class="modal-content">
-         <h3>LOGIN</h3>
-         <form class="login-form" action="">
-           <label for="name"></label>
-           <input
-            type="text"
-            name="username"
-            class="username"
-            placeholder="Username"
-            required
-           />
-           <label for="password"></label>
-           <input type="password" class="password" placeholder="Password" required
-           />
-           <button class="login-btn">LOGIN</button>
-           <button class="close-modal-btn">X</button>
-        </form>
-       </div>
+        <div class="modal-content">
+          <h3>LOGIN</h3>
+          <form class="login-form" action="">
+            <label for="name"></label>
+            <input
+              type="text"
+              name="username"
+              class="username"
+              placeholder="Username"
+              required
+            />
+            <label for="password"></label>
+            <input
+              type="password"
+              class="password"
+              placeholder="Password"
+              required
+            />
+            <button class="login-btn">LOGIN</button>
+            <button class="close-modal-btn">X</button>
+          </form>
+        </div>
       </div>
     </main>
     <footer>
-        <div class="contacts">
-          <h4>Contact</h4>
-          <div class="adress">
-            <p>2\45 Tower street</p>
-            <p>000 0000 0000 </p>  
-            <p>contacts@hotmail.com </p>
-            <p>www.natorus.com</p>          
-          </div>
-          <div class="socialicons">
-            <ul>
-              <li><a href="http://www.facebook.com"><img class="icon" src='./free-icon-facebook-4494475.png' /></a></li>
-              <li> <a href="http://www.twitter.com"><img class="icon" src='./free-icon-twitter-4494477.png' /></a></li>
-              <li> <a href="www.linkedin.com"><img class="icon" src='./free-icon-linkedin-3536505.png' /></a></li>
-            </ul>
-          </div>
+      <div class="contacts">
+        <h4>Contact</h4>
+        <div class="adress">
+          <p>2\45 Tower street</p>
+          <p>000 0000 0000</p>
+          <p>contacts@hotmail.com</p>
+          <p>www.natorus.com</p>
         </div>
-        <div class="information">
-          <h4>Information</h4>
-          <p>New Products</p>
-          <p>Top sellers</p>
-          <p>Our blog</p>
-          <p>About our shop</p>
-          <p>Secure shopping</p>
+        <div class="socialicons">
+          <ul>
+            <li>
+              <a href="http://www.facebook.com"
+                ><img class="icon" src="./free-icon-facebook-4494475.png"
+              /></a>
+            </li>
+            <li>
+              <a href="http://www.twitter.com"
+                ><img class="icon" src="./free-icon-twitter-4494477.png"
+              /></a>
+            </li>
+            <li>
+              <a href="www.linkedin.com"
+                ><img class="icon" src="./free-icon-linkedin-3536505.png"
+              /></a>
+            </li>
+          </ul>
         </div>
-        <div class="myaccount">
-          <h4>My account</h4>
-          <p>My account</p>
-          <p>Personal information</p>
-          <p>Addresses</p>
-          <p>Discount</p>
-          <p>Orders story</p>
-        </div>
-        <!-- <div class="instagram">
+      </div>
+      <div class="information">
+        <h4>Information</h4>
+        <p>New Products</p>
+        <p>Top sellers</p>
+        <p>Our blog</p>
+        <p>About our shop</p>
+        <p>Secure shopping</p>
+      </div>
+      <div class="myaccount">
+        <h4>My account</h4>
+        <p>My account</p>
+        <p>Personal information</p>
+        <p>Addresses</p>
+        <p>Discount</p>
+        <p>Orders story</p>
+      </div>
+      <!-- <div class="instagram">
           <h4>Instagram</h4>
           <div class="imageinsta">
             <img src="https://picsum.photos/50?1" alt="" />
@@ -132,8 +157,7 @@
             <img src="https://picsum.photos/50?5" alt="" />
             <img src="https://picsum.photos/50?6" alt="" />
           </div> -->
-        </div>
-      </footer>
+    </footer>
     <script src="./script.js" type="module"></script>
   </body>
 </html>

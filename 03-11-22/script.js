@@ -22,6 +22,16 @@ const createCard = (description, imgUrl, parent) => {
   parent.appendChild(cardEl);
 };
 
+/// Burger menu
+
+let menuBtn = document.querySelector(".menu-btn");
+let menu = document.querySelector(".menu");
+menuBtn.addEventListener("click", function () {
+  menuBtn.classList.toggle("active");
+  menu.classList.toggle("active");
+  document.body.classList.toggle("active");
+});
+
 ///Titolo deals-section
 const titleMainDeals = document.createElement("h2");
 titleMainDeals.textContent = "Get up to 80% OFF";
@@ -57,4 +67,11 @@ const closModalBtnEl = document.querySelector(".close-modal-btn");
 closModalBtnEl.addEventListener(
   "click",
   () => (modalEl.style = "display: none;")
+);
+
+const menuEL = document.querySelector(".menu-btn");
+const backgroundAllEl = document.querySelector(".background-grey-all-window");
+menuEL.addEventListener(
+  "click",
+  () => (backgroundAllEl.style = "display: block;")
 );
