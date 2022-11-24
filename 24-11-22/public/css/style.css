@@ -1,0 +1,39 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.form_el  {
+    padding: 10px;
+    background-color: bisque;
+    border: none;
+    border-radius: 6px;
+    transition: all 0.35s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-submit {
+    padding: 10px;
+    background-color: rgb(255, 211, 158);
+    border: none;
+    border-radius: 6px;
+    transition: all 0.35s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-submit:hover {
+    background-color: rgb(252, 191, 116);
+    font-weight: bold;
+}
+
+.form_el:hover {
+    background-color: rgb(221, 221, 221);
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+form, .wrapper {
+    text-align: center;
+}
