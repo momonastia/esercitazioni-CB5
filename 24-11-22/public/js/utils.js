@@ -49,10 +49,12 @@ function func_divisione() {
   let result = fai_divisione();
 }
 
-/* const e = require("express"); */
+///Take form elements
 
 const formElement = document.forms.formEl.elements;
 //console.log(formElement);
+
+///Take HTML element h2 for result output
 
 const resEl = document.querySelector("h2");
 
@@ -62,7 +64,11 @@ const GET = async (url) => {
     .then((data) => (resEl.textContent = `Risultato: ${data}`));
 };
 
+/// Take form element with name btnCalc_sum
+
 const btnSum = formElement.btnCalc_sum;
+
+/// Add event listener for this button
 
 btnSum.addEventListener("click", () => {
   const par1 = formElement.param1.value;

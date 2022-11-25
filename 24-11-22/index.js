@@ -1,19 +1,4 @@
-//import {somma, sottrazione, divisione, moltiplicazione} from "./src/calcolatrice.js";
-function somma(num1, num2) {
-  return parseInt(num1) + parseInt(num2);
-}
-
-function sottrazione(num1, num2) {
-  return parseInt(num1) - parseInt(num2);
-}
-
-function divisione(num1, num2) {
-  return parseInt(num1) / parseInt(num2);
-}
-
-function moltiplicazione(num1, num2) {
-  return parseInt(num1) * parseInt(num2);
-}
+const m_calc = require("./src/controller/mia_calcolatrice");
 
 const express = require("express");
 const app = express();
