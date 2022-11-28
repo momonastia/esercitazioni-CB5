@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap");
+
+html,
+body {
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: grey;
+}
+
+html {
+  background: linear-gradient(
+    90deg,
+    rgba(61, 211, 15, 0.223) 0%,
+    rgba(237, 64, 12, 0.164) 100%
+  );
+}
+
+body {
+  border: 2px solid grey;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 15px 4px rgba(82, 82, 82, 0.5);
+  background: linear-gradient(
+    90deg,
+    rgba(39, 148, 6, 0.3) 0%,
+    rgba(123, 32, 5, 0.3) 100%
+  );
+}
+
+.parametro1,
+.parametro2 {
+  border-radius: 10px;
+  border: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.risultato {
+  border: 2px solid grey;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.wrapper-calc {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+.wrapper-oper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.form_el {
+  width: 100px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+button {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 3px;
+  border: 0;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(184, 184, 184);
+  color: white;
+}
