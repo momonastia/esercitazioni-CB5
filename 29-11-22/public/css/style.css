@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+
+html {
+  background: linear-gradient(
+    90deg,
+    rgba(177, 180, 6, 0.5) 0%,
+    rgba(237, 64, 12, 0.5) 100%
+  );
+  font-family: "Questrial", sans-serif;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+.attori {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btnID,
+.btnExit {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 15px 4px rgba(82, 82, 82, 0.5);
+  font-family: "Questrial", sans-serif;
+}
+
+.btnExit:hover {
+  box-shadow: 0 0 15px 10px rgba(82, 82, 82, 0.5);
+}
+
+.btnID:hover {
+  box-shadow: 0 0 15px 10px rgba(82, 82, 82, 0.5);
+}
+
+.Risultato {
+  padding-top: 20px;
+  font-size: 24px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.main-div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  border-radius: 10px;
+}
+
+.card {
+  box-shadow: 0 0 15px 4px rgba(32, 32, 32, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  background-color: rgb(255, 243, 243);
+}
+
+.card p {
+  margin: 0px;
+}
+
+.card h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
