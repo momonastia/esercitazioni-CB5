@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "nome": "Tom",
+    "cognome": "Cruise",
+    "data_nascita": "03/07/1962",
+    "riconoscimenti": "Elenco premi vinti",
+    "inizio_attivita": "1980",
+    "fine_attivita": "",
+    "in_attivita": true
+  },
+  {
+    "id": 2,
+    "nome": "Robert",
+    "cognome": "De Niro",
+    "data_nascita": "17/08/1943",
+    "riconoscimenti": "Elenco premi vinti",
+    "inizio_attivita": "1960",
+    "fine_attivita": "",
+    "in_attivita": true
+  },
+  {
+    "id": 3,
+    "nome": "Brad",
+    "cognome": "Pitt",
+    "data_nascita": "",
+    "riconoscimenti": "",
+    "inizio_attivita": "",
+    "fine_attivita": "",
+    "in_attivita": ""
+  },
+  {
+    "id": 4,
+    "nome": "Ryan",
+    "cognome": "Gosling",
+    "data_nascita": "",
+    "riconoscimenti": "",
+    "inizio_attivita": "",
+    "fine_attivita": "",
+    "in_attivita": ""
+  }
+]

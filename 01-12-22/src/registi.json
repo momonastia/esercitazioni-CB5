@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "nome": "Stanley",
+    "cognome": "Kubrik",
+    "data_nascita": "26/07/1928",
+    "riconoscimenti": "Elenco premi vinti",
+    "inizio_attivita": "1953",
+    "fine_attivita": "2000",
+    "in_attivita": false
+  },
+  {
+    "id": 2,
+    "nome": "Bernardo",
+    "cognome": "Bertolucci",
+    "data_nascita": "16/03/1941",
+    "riconoscimenti": "Elenco premi vinti",
+    "inizio_attivita": "1962",
+    "fine_attivita": "2001",
+    "in_attivita": false
+  },
+  {
+    "id": 3,
+    "nome": "Gus",
+    "cognome": "Van Sant",
+    "data_nascita": "24/07/1952",
+    "riconoscimenti": "Palma d'oro, Premio al miglior regista",
+    "inizio_attivita": "1982",
+    "fine_attivita": "",
+    "in_attivita": true
+  },
+  {
+    "id": 4,
+    "nome": "Federico",
+    "cognome": "Fellini",
+    "data_nascita": "20/01/1920",
+    "riconoscimenti": "Oscar al miglior film in lingua straniera, Palma d'oro",
+    "inizio_attivita": "1950",
+    "fine_attivita": "1990",
+    "in_attivita": "false"
+  }
+]
