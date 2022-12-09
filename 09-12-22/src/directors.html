@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Crea regista</title>
+  </head>
+  <body>
+    <div class="hero">
+      <img src="/hero1.jpg" alt="" />
+    </div>
+    <h1>Videoteca</h1>
+    <div class="title">
+      <h2>Registi</h2>
+    </div>
+    <div class="form__container">
+      <form name="createForm" class="create-form" autocomplete="off">
+        <input
+          id="id"
+          class="input-field"
+          name="id"
+          type="text"
+          placeholder=" id"
+        />
+        <input
+          id="nome"
+          class="input-field"
+          name="nome"
+          type="text"
+          placeholder=" nome"
+        />
+        <input
+          id="cognome"
+          class="input-field"
+          name="cognome"
+          type="text"
+          placeholder=" cognome"
+        />
+        <input
+          id="data_nascita"
+          class="input-field"
+          name="data_nascita"
+          type="text"
+          placeholder=" data di nascita"
+        />
+        <input
+          id="riconoscimenti"
+          class="input-field"
+          name="riconoscimenti"
+          type="text"
+          placeholder=" riconoscimenti"
+        />
+        <input
+          id="inizio_attivita"
+          class="input-field"
+          name="inizio_attivita"
+          type="text"
+          placeholder=" inzio attivita'"
+        />
+        <input
+          id="fine_attivita"
+          class="input-field"
+          name="fine_attivita"
+          type="text"
+          placeholder=" fine attivita'"
+        />
+        <input
+          id="in_attivita"
+          class="input-field"
+          name="in_attivita"
+          type="text"
+          placeholder=" in attivita'?"
+        />
+        <button id="create-btn">Crea</button>
+        <button class="delete-btn">Delete (inserire ID)</button>
+        <button class="search-btn">Cerca (inserire nome)</button>
+        <button class="edit-btn">Edit</button>
+      </form>
+      <div class="img-camera">
+        <img src="/camera.png" alt="" />
+      </div>
+    </div>
+
+    <div id="container" class="container"></div>
+    <div class="cardList"></div>
+    <div class="main-div"></div>
+    <script type="module" src="./js/createregista.js"></script>
+    <script type="module" src="./js/updateregista.js"></script>
+    <script type="module" src="./js/utils.js"></script>
+  </body>
+</html>

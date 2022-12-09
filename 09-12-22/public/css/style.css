@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+
+html {
+  background: linear-gradient(
+    90deg,
+    rgba(11, 0, 0, 0.9) 0%,
+    rgba(227, 30, 3, 0.849) 50%,
+    rgba(24, 0, 0, 0.9) 100%
+  );
+  font-family: "Questrial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  width: 100%;
+  margin: 0px;
+  box-sizing: border-box;
+  height: 200px;
+}
+
+.hero img {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+h1 {
+  position: absolute;
+  top: 50px;
+  left: 150px;
+  color: white;
+}
+
+.title {
+  display: flex;
+  background-color: white;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  color: rgba(58, 0, 0, 0.9);
+  text-align: center;
+  margin: 0px;
+}
+.cardList {
+  color: white;
+  text-align: center;
+}
+
+.form__container {
+  margin-top: 20px;
+  box-sizing: content-box;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.delete-btn,
+.search-btn,
+.edit-btn,
+#create-btn {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 15px 4px rgba(82, 82, 82, 0.5);
+  font-family: "Questrial", sans-serif;
+  color: rgba(58, 0, 0, 0.9);
+}
+
+.delete-btn:hover,
+.search-btn:hover,
+.edit-btn:hover,
+#create-btn:hover {
+  box-shadow: 0 0 15px 10px rgba(39, 39, 39, 0.5);
+  background-color: rgba(197, 77, 61, 0.2);
+  cursor: pointer;
+  color: aliceblue;
+  transition-duration: 1s;
+}
+
+.delete-input,
+.input-field {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 15px 4px rgba(82, 82, 82, 0.5);
+  font-family: "Questrial", sans-serif;
+}
+
+.Risultato {
+  padding-top: 20px;
+  font-size: 24px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.main-div {
+  /*   max-width: 600px; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 200px;
+  height: 150px;
+  box-shadow: 0 0 15px 4px rgba(32, 32, 32, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  background-color: rgb(255, 243, 243);
+  color: rgba(58, 0, 0, 0.9);
+}
+
+.card:hover {
+  box-shadow: 0 0 25px 10px rgba(32, 32, 32, 0.7);
+  transform: translateY(-10px);
+  transition-duration: 1s;
+}
+
+.card p {
+  margin: 0px;
+}
+
+.card h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.form__container {
+  display: flex;
+  gap: 20px;
+}
+
+.create-form {
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 30px;
+  justify-content: center;
+}
+
+.main-div {
+  margin: 20px;
+}
+
+.img-camera {
+  box-sizing: content-box;
+  width: 400px;
+  padding-top: 100px;
+  padding-left: 200px;
+}
+
+.img-camera img {
+  width: 100%;
+}
+
+.img-pelic {
+  box-sizing: content-box;
+  width: 100px;
+  padding-top: 150px;
+  padding-left: 300px;
+}
+
+.img-pelic img {
+  width: 100%;
+}
