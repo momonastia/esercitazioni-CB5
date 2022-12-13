@@ -1,0 +1,121 @@
+import arr from "./data.js";
+
+/// выпадающий список
+
+const selectEl = document.getElementById("select-location");
+function createSelectEl(arr, str) {
+  arr.forEach(function (el) {
+    const option = document.createElement("option");
+    option.value = el.value;
+    option.innerHTML = el.name;
+    option.setAttribute("class", "option");
+
+    selectEl.appendChild(option);
+    if (option.value === str) {
+      option.setAttribute("selected", true);
+    }
+  });
+
+  return selectEl;
+}
+
+createSelectEl(arr, "Aci Bonaccorsi");
+
+////_________________________________________________________________________
+
+const wrapper = document.querySelector(".wrapper"),
+  inputPart = document.querySelector(".input-part"),
+  infoTxt = inputPart.querySelector(".info-txt"),
+  /* inputField = document.getElementById("select-location"), */
+  /*  locationBtn = inputPart.querySelector("button"), */
+  weatherPart = wrapper.querySelector(".weather-part"),
+  wIcon = weatherPart.querySelector("img"),
+  arrowBack = wrapper.querySelector("header i"),
+  rainBackgroudEl = document.querySelector(".rain-background"),
+  clearBackgroudEl = document.querySelector(".clear-background"),
+  cloudBackgroudEl = document.querySelector(".cloud-background"),
+  snowBackgroudEl = document.querySelector(".snow-background"),
+  hazeBackgroudEl = document.querySelector(".haze-background"),
+  stormBackgroudEl = document.querySelector(".storm-background");
+
+let api;
+
+selectEl.addEventListener("change", (e) => {
+  if (selectEl.value == "") {
+    console.log("Choose the location");
+  } else {
+    requestApi(selectEl.value);
+  }
+});
+
+function requestApi(city) {
+  api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=37e64d32df1a5897bfae2b5672c5e514`;
+  fetchData();
+}
+
+function fetchData() {
+  infoTxt.innerText = "Getting weather details...";
+  infoTxt.classList.add("pending");
+  fetch(api)
+    .then((res) => res.json())
+    .then((result) => weatherDetails(result))
+    .catch(() => {
+      infoTxt.innerText = "Something went wrong";
+      infoTxt.classList.replace("pending", "error");
+    });
+}
+
+function weatherDetails(info) {
+  if (info.cod == "404") {
+    infoTxt.classList.replace("pending", "error");
+    infoTxt.innerText = `${selectEl.value} isn't a valid city name`;
+  } else {
+    const city = info.name;
+    const country = info.sys.country;
+    const { description, id } = info.weather[0];
+    const { temp, feels_like, humidity } = info.main;
+
+    if (id == 800) {
+      wIcon.src = "icons/clear.png";
+      clearBackgroudEl.classList.add("active");
+    } else if (id >= 200 && id <= 232) {
+      wIcon.src = "icons/storm.png";
+      stormBackgroudEl.classList.add("active");
+    } else if (id >= 600 && id <= 622) {
+      wIcon.src = "icons/snow.png";
+      snowBackgroudEl.classList.add("active");
+    } else if (id >= 701 && id <= 781) {
+      wIcon.src = "icons/haze.png";
+      hazeBackgroudEl.classList.add("active");
+    } else if (id >= 801 && id <= 804) {
+      wIcon.src = "icons/cloud.png";
+      cloudBackgroudEl.classList.add("active");
+    } else if ((id >= 500 && id <= 531) || (id >= 300 && id <= 321)) {
+      wIcon.src = "icons/rain.png";
+      rainBackgroudEl.classList.add("active");
+    }
+
+    weatherPart.querySelector(".temp .numb").innerText = Math.floor(temp);
+    weatherPart.querySelector(".weather").innerText = description;
+    weatherPart.querySelector(
+      ".location span"
+    ).innerText = `${city}, ${country}`;
+    weatherPart.querySelector(".temp .numb-2").innerText =
+      Math.floor(feels_like);
+    weatherPart.querySelector(".humidity span").innerText = `${humidity}%`;
+    infoTxt.classList.remove("pending", "error");
+    infoTxt.innerText = "";
+    selectEl.value = "";
+    wrapper.classList.add("active");
+  }
+}
+
+arrowBack.addEventListener("click", () => {
+  wrapper.classList.remove("active");
+  clearBackgroudEl.classList.remove("active");
+  rainBackgroudEl.classList.remove("active");
+  cloudBackgroudEl.classList.remove("active");
+  snowBackgroudEl.classList.remove("active");
+  hazeBackgroudEl.classList.remove("active");
+  stormBackgroudEl.classList.remove("active");
+});
