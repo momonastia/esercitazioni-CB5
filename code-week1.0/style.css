@@ -243,7 +243,8 @@ header i {
   font-size: 37px;
 }
 
-.image-background {
+.image-background,
+.image-background-mobile {
   position: absolute;
   height: 100vh;
   width: 100vw;
@@ -251,8 +252,12 @@ header i {
   overflow: hidden;
 }
 
-.image-background img {
-  object-fit: none;
+.image-background-mobile {
+  object-fit: cover;
+}
+
+.image-background {
+  display: none;
 }
 
 .video-background {
@@ -296,4 +301,14 @@ header i {
   top: 50%;
   transform: translate(-50%, -50%); */
   z-index: -1;
+}
+
+@media (min-width: 600px) {
+  .image-background-mobile {
+    display: none;
+  }
+
+  .image-background {
+    display: block;
+  }
 }
