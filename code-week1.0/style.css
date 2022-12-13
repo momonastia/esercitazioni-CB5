@@ -202,13 +202,15 @@ header i {
 }
 .weather-part .bottom-details {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
   border-top: 1px solid #ccc;
+  overflow: visible;
 }
 .bottom-details .column {
   display: flex;
-  width: 100%;
+  width: 100px;
   padding: 15px 0;
   align-items: center;
   justify-content: center;
@@ -217,9 +219,9 @@ header i {
   color: #5dbbff;
   font-size: 40px;
 }
-.column.humidity {
+/* .column.humidity {
   border-left: 1px solid #ccc;
-}
+} */
 .column .details {
   margin-left: 3px;
 }

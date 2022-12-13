@@ -71,7 +71,8 @@ function weatherDetails(info) {
     const city = info.name;
     const country = info.sys.country;
     const { description, id } = info.weather[0];
-    const { temp, feels_like, humidity } = info.main;
+    const { temp, feels_like, humidity, pressure } = info.main;
+    const windspeed = info.wind.speed;
 
     if (id == 800) {
       wIcon.src = "icons/clear.png";
@@ -101,6 +102,8 @@ function weatherDetails(info) {
     weatherPart.querySelector(".temp .numb-2").innerText =
       Math.floor(feels_like);
     weatherPart.querySelector(".humidity span").innerText = `${humidity}%`;
+    weatherPart.querySelector(".pressure span").innerText = `${pressure}hPa`;
+    weatherPart.querySelector(".wind-speed span").innerText = `${windspeed}m/s`;
     infoTxt.classList.remove("pending", "error");
     infoTxt.innerText = "";
     selectEl.value = "";
