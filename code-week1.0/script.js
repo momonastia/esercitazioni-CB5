@@ -26,8 +26,6 @@ createSelectEl(arr, "Aci Bonaccorsi");
 const wrapper = document.querySelector(".wrapper"),
   inputPart = document.querySelector(".input-part"),
   infoTxt = inputPart.querySelector(".info-txt"),
-  /* inputField = document.getElementById("select-location"), */
-  /*  locationBtn = inputPart.querySelector("button"), */
   weatherPart = wrapper.querySelector(".weather-part"),
   wIcon = weatherPart.querySelector("img"),
   arrowBack = wrapper.querySelector("header i"),
