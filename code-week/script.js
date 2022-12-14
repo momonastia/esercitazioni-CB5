@@ -80,20 +80,50 @@ function weatherDetails(info) {
     if (id == 800) {
       wIcon.src = "icons/clear.png";
       clearBackgroudEl.classList.add("active");
+      stormBackgroudEl.classList.remove("active");
+      snowBackgroudEl.classList.remove("active");
+      hazeBackgroudEl.classList.remove("active");
+      cloudBackgroudEl.classList.remove("active");
+      rainBackgroudEl.classList.remove("active");
     } else if (id >= 200 && id <= 232) {
       wIcon.src = "icons/storm.png";
+      clearBackgroudEl.classList.remove("active");
       stormBackgroudEl.classList.add("active");
+      snowBackgroudEl.classList.remove("active");
+      hazeBackgroudEl.classList.remove("active");
+      cloudBackgroudEl.classList.remove("active");
+      rainBackgroudEl.classList.remove("active");
     } else if (id >= 600 && id <= 622) {
       wIcon.src = "icons/snow.png";
+      clearBackgroudEl.classList.remove("active");
+      stormBackgroudEl.classList.remove("active");
       snowBackgroudEl.classList.add("active");
+      hazeBackgroudEl.classList.remove("active");
+      cloudBackgroudEl.classList.remove("active");
+      rainBackgroudEl.classList.remove("active");
     } else if (id >= 701 && id <= 781) {
       wIcon.src = "icons/haze.png";
+      clearBackgroudEl.classList.remove("active");
+      stormBackgroudEl.classList.remove("active");
+      snowBackgroudEl.classList.remove("active");
       hazeBackgroudEl.classList.add("active");
+      cloudBackgroudEl.classList.remove("active");
+      rainBackgroudEl.classList.remove("active");
     } else if (id >= 801 && id <= 804) {
       wIcon.src = "icons/cloud.png";
+      clearBackgroudEl.classList.remove("active");
+      stormBackgroudEl.classList.remove("active");
+      snowBackgroudEl.classList.remove("active");
+      hazeBackgroudEl.classList.remove("active");
       cloudBackgroudEl.classList.add("active");
+      rainBackgroudEl.classList.remove("active");
     } else if ((id >= 500 && id <= 531) || (id >= 300 && id <= 321)) {
       wIcon.src = "icons/rain.png";
+      clearBackgroudEl.classList.remove("active");
+      stormBackgroudEl.classList.remove("active");
+      snowBackgroudEl.classList.remove("active");
+      hazeBackgroudEl.classList.remove("active");
+      cloudBackgroudEl.classList.remove("active");
       rainBackgroudEl.classList.add("active");
     }
     setTimeout(addWrapper, 500); /// при нажатии на кнопку выбора комуне задержка в полсекунды чтобы меню не перекрывало виджет
@@ -128,10 +158,6 @@ arrowBack.addEventListener("click", () => {
 
 /// кнопка выбора комуне
 
-function toggleMain() {
-  mainEl.classList.toggle("active");
-}
-
 function addWrapper() {
   /// при нажатии на кнопку выбора комуне задержка в полсекунды чтобы меню не перекрывало виджет
   wrapper.classList.add("active");
@@ -139,7 +165,6 @@ function addWrapper() {
 
 buttonSelectEl.addEventListener("click", (e) => {
   mainEl.classList.toggle("active");
-  /*  setTimeout(toggleMain, 500); */
   wrapper.classList.remove("active");
 });
 
