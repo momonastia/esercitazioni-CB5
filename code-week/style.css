@@ -9,7 +9,6 @@
 }
 body {
   display: flex;
-  /*  align-items: center; */
   justify-content: center;
   min-height: 100vh;
   /*   background-image: url(./background/main-background.jpg); */
@@ -58,11 +57,9 @@ body {
   position: relative;
   top: 0px;
   width: 230px;
-  /*  background: #fff; */
-  /*   border-radius: 7px;
-  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05); */
   opacity: 0.8;
 }
+
 .wrapper header {
   text-align: center;
   font-size: 18px;
@@ -70,8 +67,8 @@ body {
   color: #ffffff;
   padding: 16px 15px;
   border-bottom: 1px solid #ccc;
-  margin: 10px;
 }
+
 header i {
   font-size: 0em;
   cursor: pointer;
@@ -155,7 +152,6 @@ header i {
 
 .wrapper .weather-part {
   display: none;
-  margin: 30px 0 0;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -312,7 +308,6 @@ header i {
 }
 
 .main {
-  /*   display: none; */
   transform: translateX(-400%);
   height: 500px;
   transition: all 0.5s;
@@ -371,12 +366,90 @@ header i {
   cursor: pointer;
 }
 
-@media (min-width: 600px) {
-  .image-background-mobile {
-    display: none;
+@media (min-width: 1025px) {
+  body {
+    display: block;
+    margin: 0px;
+    padding: 0px;
   }
 
-  .image-background {
+  .wrapper {
     display: block;
+    position: relative;
+    width: 900px;
+  }
+
+  .weather-part {
+    padding-left: 400px;
+  }
+
+  .wrapper.active-desktop {
+    display: block;
+  }
+
+  .video-background {
+    width: 100%;
+    height: 100%;
+    /*   box-sizing: content-box; */
+  }
+
+  .wrapper header {
+    padding-top: 40px;
+    padding-left: 400px;
+    border-bottom: none;
+  }
+
+  .wrapper.active-desktop .weather-part {
+    display: flex;
+  }
+
+  .wrapper .input-part {
+    padding-left: 400px;
+  }
+}
+
+@media (min-width: 600px) {
+  body {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .wrapper {
+    display: block;
+    position: relative;
+    width: 700px;
+  }
+
+  .weather-part {
+    padding-left: 300px;
+  }
+
+  .wrapper.active-desktop {
+    display: block;
+  }
+
+  .video-background {
+    width: 100%;
+    height: 100%;
+    /*   box-sizing: content-box; */
+  }
+
+  .wrapper header {
+    padding-top: 40px;
+    padding-left: 400px;
+    border-bottom: none;
+  }
+
+  .wrapper.active-desktop .weather-part {
+    display: flex;
+  }
+
+  .wrapper .input-part {
+    padding-left: 400px;
+  }
+
+  .main.active {
+    height: 80vh;
   }
 }

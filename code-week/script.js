@@ -145,14 +145,6 @@ function weatherDetails(info) {
 }
 
 arrowBack.addEventListener("click", () => {
-  /*   wrapper.classList.remove("active");
-  clearBackgroudEl.classList.remove("active");
-  rainBackgroudEl.classList.remove("active");
-  cloudBackgroudEl.classList.remove("active");
-  snowBackgroudEl.classList.remove("active");
-  hazeBackgroudEl.classList.remove("active");
-  stormBackgroudEl.classList.remove("active");
-  mainEl.classList.add("active"); */
   location.onload = requestApi("catania");
 });
 
@@ -166,6 +158,7 @@ function addWrapper() {
 buttonSelectEl.addEventListener("click", (e) => {
   mainEl.classList.toggle("active");
   wrapper.classList.remove("active");
+  wrapper.classList.add("active-desktop");
 });
 
 /// загрузка катании по умолчанию
