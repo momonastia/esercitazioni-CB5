@@ -46,13 +46,6 @@ body {
   opacity: 0.5;
 }
 
-#select-location option:hover {
-  color: white;
-  background: #721c24;
-  border-radius: 10px;
-  opacity: 0.5;
-}
-
 .wrapper {
   position: relative;
   top: 0px;
@@ -155,6 +148,7 @@ header i {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: -70px;
 }
 .wrapper.active .weather-part {
   display: flex;
@@ -296,15 +290,16 @@ header i {
   width: 200px;
   overflow: scroll;
   scroll-behavior: smooth;
-  display: flex;
+  /*   display: flex; */
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: left;
   gap: 10px;
   background-color: transparent;
   border-radius: 10px;
   padding: 10px;
   opacity: 0.9;
+  height: 50vh;
 }
 
 .main {
@@ -312,9 +307,9 @@ header i {
   height: 500px;
   transition: all 0.5s;
   width: 200px;
-  display: flex;
+  /* display: flex; */
   flex-wrap: wrap;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
   gap: 10px;
   background-color: transparent;
@@ -334,6 +329,7 @@ header i {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   padding: 5px;
+  margin: 5px;
 }
 
 .card h4 {
@@ -364,6 +360,14 @@ header i {
 
 .button-select:hover {
   cursor: pointer;
+}
+
+.search-form {
+  opacity: 0;
+}
+
+.search-form.active {
+  opacity: 1;
 }
 
 @media (min-width: 600px) {
@@ -408,8 +412,21 @@ header i {
   }
 
   .main.active {
-    height: 80vh;
+    height: 60vh;
   }
+}
+
+.search-input {
+  color: #0c5460;
+  height: 50px;
+  width: 200px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: none;
+  margin: 14px;
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
 }
 
 @media (min-width: 1025px) {
@@ -451,5 +468,9 @@ header i {
 
   .wrapper .input-part {
     padding-left: 400px;
+  }
+
+  .main.active {
+    height: 60vh;
   }
 }

@@ -17,6 +17,7 @@ const createCard = (nome, value, parent) => {
   cardEl.addEventListener("click", (e) => {
     requestApi(cardEl.id);
     mainEl.classList.remove("active");
+    searchFormEl.classList.remove("active");
   });
 
   const titleEl = document.createElement("h4");
@@ -45,7 +46,8 @@ const wrapper = document.querySelector(".wrapper"),
   snowBackgroudEl = document.querySelector(".snow-background"),
   hazeBackgroudEl = document.querySelector(".haze-background"),
   stormBackgroudEl = document.querySelector(".storm-background"),
-  buttonSelectEl = document.querySelector(".button-select");
+  buttonSelectEl = document.querySelector(".button-select"),
+  searchFormEl = document.querySelector(".search-form");
 
 let api;
 
@@ -157,6 +159,7 @@ function addWrapper() {
 
 buttonSelectEl.addEventListener("click", (e) => {
   mainEl.classList.toggle("active");
+  searchFormEl.classList.toggle("active");
   wrapper.classList.remove("active");
   wrapper.classList.add("active-desktop");
 });
@@ -164,3 +167,20 @@ buttonSelectEl.addEventListener("click", (e) => {
 /// загрузка катании по умолчанию
 
 location.onload = requestApi("catania");
+
+//// проба поиска
+const inputEl = document.querySelector(".search-input");
+let inputValue = "";
+
+inputEl.addEventListener("input", (e) => {
+  inputValue = "";
+  inputValue += e.target.value.toLowerCase();
+  console.log(inputValue);
+  mainEl.replaceChildren();
+  const filteredByInput = arr.filter((comune) =>
+    comune.value.includes(inputValue)
+  );
+  filteredByInput.map((comune) =>
+    createCard(comune.name, comune.value, mainEl)
+  );
+});
