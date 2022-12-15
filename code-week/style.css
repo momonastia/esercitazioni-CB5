@@ -427,6 +427,8 @@ header i {
   padding: 10px;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
+  caret-color: transparent;
+  outline: none;
 }
 
 @media (min-width: 1025px) {
