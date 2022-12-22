@@ -1,0 +1,19 @@
+.Button--variant-primary {
+  background: rgb(20, 141, 135);
+  color: #fff;
+  border-radius: 0.5em;
+  border: none;
+  width: 10em;
+  height: 3em;
+  margin: 0.5em;
+}
+
+.Button--variant-secondary {
+  background: rgb(147, 184, 27);
+  color: #fff;
+  border-radius: 0.5em;
+  border: none;
+  width: 10em;
+  height: 3em;
+  margin: 0.5em;
+}
