@@ -57,10 +57,7 @@ card.forEach((card) => {
 
 const loginMenuEl = document.querySelector(".login-menu");
 const modalEl = document.querySelector(".modal");
-loginMenuEl.addEventListener(
-  "click",
-  () => (modalEl.style = "display: block;")
-);
+loginMenuEl.addEventListener("click", () => (modalEl.style = "display: flex;"));
 
 /// Modal window closing
 const closModalBtnEl = document.querySelector(".close-modal-btn");
@@ -69,9 +66,9 @@ closModalBtnEl.addEventListener(
   () => (modalEl.style = "display: none;")
 );
 
-const menuEL = document.querySelector(".menu-btn");
+/* const menuEL = document.querySelector(".menu-btn");
 const backgroundAllEl = document.querySelector(".background-grey-all-window");
 menuEL.addEventListener(
   "click",
   () => (backgroundAllEl.style = "display: block;")
-);
+); */
