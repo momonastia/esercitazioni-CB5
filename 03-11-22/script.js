@@ -5,8 +5,9 @@ const createCard = (description, imgUrl, parent) => {
   cardEl.setAttribute("class", "card");
   // title for each card
 
-  const titleEl = document.createElement("h4");
+  const titleEl = document.createElement("div");
   titleEl.textContent = description;
+  titleEl.classList.add("card-title");
 
   //div for img
   const imgDiv = document.createElement("div");
@@ -33,25 +34,26 @@ menuBtn.addEventListener("click", function () {
 });
 
 ///Titolo deals-section
-const titleMainDeals = document.createElement("h2");
+const titleMainDeals = document.createElement("div");
 titleMainDeals.textContent = "Get up to 80% OFF";
+titleMainDeals.classList.add("sales-title");
 
 const dealsCards = document.createElement("div");
 dealsCards.setAttribute("class", "cards-sales");
-const SalesSection = document.querySelector(".sales");
+const salesSection = document.querySelector(".sales");
 
-SalesSection.append(titleMainDeals, dealsCards);
+salesSection.append(titleMainDeals, dealsCards);
 
 GirlImages.map((product) =>
   createCard(product.description, product.image, dealsCards)
 );
 
-/// Card expansion onclick (not finished)
-
+/// Card expansion onclick
+/* 
 const card = document.querySelectorAll(".img-div");
 card.forEach((card) => {
   card.addEventListener("click", () => card.classList.toggle("img-div-big"));
-});
+}); */
 
 /// Modal window opening
 
@@ -65,10 +67,3 @@ closModalBtnEl.addEventListener(
   "click",
   () => (modalEl.style = "display: none;")
 );
-
-/* const menuEL = document.querySelector(".menu-btn");
-const backgroundAllEl = document.querySelector(".background-grey-all-window");
-menuEL.addEventListener(
-  "click",
-  () => (backgroundAllEl.style = "display: block;")
-); */
