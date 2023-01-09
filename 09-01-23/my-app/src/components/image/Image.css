@@ -1,0 +1,11 @@
+.image-tree {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.image-tree img {
+  width: 100%;
+}

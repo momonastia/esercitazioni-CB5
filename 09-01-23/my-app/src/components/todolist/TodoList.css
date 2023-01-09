@@ -1,0 +1,14 @@
+.container-lista {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.lista {
+  display: flex;
+  width: 10em;
+  justify-content: flex-end;
+}
