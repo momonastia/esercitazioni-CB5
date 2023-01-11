@@ -12,8 +12,13 @@ export function BloodType() {
 
   return (
     <section className="blood-type">
-      {JSON.stringify(data)}
-      <button onClick={refetch}>Refetch!</button>
+      <div>Blood type code: {data?.id}</div>
+      <h1>{data?.type}</h1>
+      <h5>{data?.group}</h5>
+      <h5>{data?.rh_factor}</h5>
+      <button className="btn-refresh" onClick={refetch}>
+        Refetch!
+      </button>
     </section>
   );
 }

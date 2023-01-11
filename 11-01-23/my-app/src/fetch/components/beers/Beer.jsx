@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { useFetch } from "../../../hooks/use-fetch";
 import { ENDPOINT } from "../../constants/endpoints";
 import "./Beer.css";
@@ -11,8 +12,13 @@ export function Beer() {
 
   return (
     <section className="beer">
-      {JSON.stringify(data)}
-      <button onClick={refetch}>Refetch!</button>
+      <div>Beer code: {data?.id}</div>
+      <h1>{data?.brand}</h1>
+      <h5>{data?.name}</h5>
+      <h5>{data?.style}</h5>
+      <button className="btn-refresh" onClick={refetch}>
+        Refetch!
+      </button>
     </section>
   );
 }

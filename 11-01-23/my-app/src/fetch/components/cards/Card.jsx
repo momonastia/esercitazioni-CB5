@@ -16,8 +16,15 @@ export function Card() {
 
   return (
     <section className="card">
-      {JSON.stringify(data)}
-      <button onClick={refetch}>Refetch!</button>
+      {/* {JSON.stringify(data)} */}
+      <div>Card code: {data?.id}</div>
+      <h1>{data?.credit_card_number}</h1>
+      <h5>{data?.credit_card_type}</h5>
+      <h5>{data?.credit_card_expiry_date}</h5>
+
+      <button className="btn-refresh" onClick={refetch}>
+        Refetch!
+      </button>
     </section>
   );
 }

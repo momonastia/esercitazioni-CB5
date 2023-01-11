@@ -11,8 +11,13 @@ export function Bank() {
 
   return (
     <section className="bank">
-      {JSON.stringify(data)}
-      <button onClick={refetch}>Refetch!</button>
+      <div>Bank code: {data?.id}</div>
+      <h1>{data?.bank_name}</h1>
+      <h5>{data?.account_number}</h5>
+      <h5>{data?.swift_bic}</h5>
+      <button className="btn-refresh" onClick={refetch}>
+        Refetch!
+      </button>
     </section>
   );
 }
