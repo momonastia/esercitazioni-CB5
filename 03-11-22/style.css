@@ -385,9 +385,10 @@ footer {
   background-color: rgb(126, 104, 82);
   border-radius: 30px;
   width: 200px;
-  height: 15em;
+  height: fit-content;
   color: aliceblue;
   opacity: 1;
+  padding: 1%;
 }
 
 .login-form {
@@ -411,11 +412,38 @@ footer {
 
 .login-btn {
   background-color: rgb(175, 149, 123);
-  color: aliceblue;
+  color: beige;
   border: none;
   border-radius: 30px;
   width: 100px;
   height: 40px;
+}
+
+.login-btn:hover {
+  color: rgb(175, 149, 123);
+  background-color: beige;
+  transition: 0.5s;
+}
+
+.remember-checkbox,
+.password-forgot {
+  display: flex;
+  width: 150px;
+}
+
+.modal-win-footer {
+  display: flex;
+  font-size: 0.8em;
+  gap: 5%;
+}
+
+.modal-win-footer a {
+  color: beige;
+}
+
+.modal-win-footer a:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .close-modal-btn {
@@ -425,7 +453,7 @@ footer {
   border: none;
   font-weight: bold;
   font-size: 1.5em;
-  right: 10%;
+  right: 5%;
   width: fit-content;
   transform: rotate(45deg);
 }
