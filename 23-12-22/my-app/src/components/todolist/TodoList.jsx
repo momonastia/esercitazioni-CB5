@@ -1,17 +1,24 @@
 import React, { useState } from "react";
 import { Button } from "../button/Button";
 import { Text } from "../text/Text";
+import "./TodoList.css";
+import { Promo } from "../promo/Promo";
 
 function TodoItem({ label }) {
   const [isDone, changeDone] = useState(false);
 
   console.log(label + " " + isDone);
 
+  function eventHandler() {
+    changeDone(true);
+  }
+
   return (
-    <div>
+    <div className="lista">
       <Text as="h5">{label}</Text>
       <Button
-        onClick={() => changeDone(true)}
+        /* onClick={() => changeDone(true)} вариант со стрелочной функцией*/
+        onClick={eventHandler}
         className={isDone ? "primary" : "secondary"}
       >
         Done!
@@ -30,5 +37,15 @@ export function TodoList(props) {
     { label: "Repeat", id: 6 },
   ];
 
-  return items.map((item) => <TodoItem label={item.label} key={item.id} />);
+  const Lista = items.map((item) => (
+    <TodoItem label={item.label} key={item.id} />
+  ));
+
+  return (
+    <div className="container-lista">
+      <Text as="h2">To Do List</Text>
+      {Lista}
+      <Promo />
+    </div>
+  );
 }
