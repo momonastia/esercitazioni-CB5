@@ -1,0 +1,8 @@
+.select-input {
+  width: fit-content;
+  height: 50px;
+  background-color: #3e3e3e;
+  border-radius: 5px;
+  color: rgb(197, 170, 16);
+  font-family: "Source Code Pro", monospace;
+}

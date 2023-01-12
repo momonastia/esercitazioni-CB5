@@ -1,0 +1,50 @@
+.card {
+  width: 80%;
+  height: 18em;
+  color: rgb(197, 170, 16);
+  box-shadow: 0px 0px 24px 3px rgba(197, 170, 16, 0.7);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.btn-refresh {
+  font-family: "Source Code Pro", monospace;
+  width: 6em;
+  height: 3em;
+  border-radius: 10px;
+  border: 1px solid rgb(197, 170, 16);
+  color: rgb(197, 170, 16);
+  background-color: transparent;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(197, 170, 16);
+  overflow: hidden;
+  cursor: pointer;
+}
+.btn-refresh:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.5em;
+  height: 100%;
+  background-color: rgba(197, 170, 16, 0.6);
+  transform: translateX(-4em) skewX(-45deg);
+}
+.btn-refresh:hover:before {
+  animation: move-light 0.5s;
+}
+
+@keyframes move-light {
+  from {
+    transform: translateX(-4em) skewX(-45deg);
+  }
+  to {
+    transform: translateX(10em) skewX(-45deg);
+  }
+}
