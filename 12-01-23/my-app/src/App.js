@@ -5,6 +5,7 @@ import { Card } from "./fetch/components/cards/Card";
 import { Bank } from "./fetch/components/banks/Bank";
 import { Beer } from "./fetch/components/beers/Beer";
 import { ComponentSelector } from "./fetch/components/componentselector/ComponentSelector";
+import { Counter } from "./fetch/components/counter/counter";
 
 function App() {
   const [componentToRender, setComponentToRender] = useState(`default`);
@@ -13,14 +14,15 @@ function App() {
     setComponentToRender(event.target.value);
   };
 
-  const DefaultComponent = () => <div>Nothing selected</div>;
-
   const ComponentMap = {
     blood: BloodType,
     beer: Beer,
     bank: Bank,
     card: Card,
-    default: DefaultComponent,
+    counter: Counter,
+    default: function () {
+      return <div>Nothing selected</div>;
+    },
   };
 
   const DynamicComponent = ComponentMap[componentToRender];
