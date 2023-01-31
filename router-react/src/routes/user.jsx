@@ -1,6 +1,7 @@
-import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { Outlet, useParams } from "react-router-dom";
+import { useState, useEffect, Fragment } from "react";
 import styles from "./user.module.scss";
+import UserCard from ".././components/userCard/userCard";
 
 export default function User() {
   let { user } = useParams();
@@ -14,11 +15,13 @@ export default function User() {
   }, [user]);
 
   return (
-    <div className={styles.User} id={userData.id}>
-      <div className={styles.content}>
-        <h1> User id: {userData.id}</h1>
-        <p>{userData.firstName + " " + userData.lastName}</p>
+    <Fragment>
+      <div className={styles.User} id={userData.id}>
+        <div className={styles.content}>
+          <UserCard userData={userData} />
+        </div>
       </div>
-    </div>
+      <Outlet />
+    </Fragment>
   );
 }

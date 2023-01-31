@@ -1,5 +1,7 @@
 import { useState, useEffect, Fragment } from "react";
-import styles from "./user.module.scss";
+import { Outlet } from "react-router-dom";
+import UserCard from ".././components/userCard/userCard";
+import styles from "./users.module.scss";
 
 export default function Users() {
   const [usersData, setUsersData] = useState([]);
@@ -13,15 +15,16 @@ export default function Users() {
   console.log(usersData);
 
   return (
-    <div className={styles.Users}>
-      <div className={styles.content}>
+    <Fragment>
+      <div className={styles.Users}>
         <h1>Users list</h1>
-        {usersData.users?.map((user) => (
-          <p key={user.id}>
-            {user.id + " " + user.firstName + " " + user.lastName}
-          </p>
-        ))}
+        <div className={styles.content}>
+          {usersData.users?.map((user) => (
+            <UserCard userData={user} key={user.id} />
+          ))}
+        </div>
       </div>
-    </div>
+      <Outlet />
+    </Fragment>
   );
 }
