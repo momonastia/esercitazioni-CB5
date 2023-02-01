@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const UserCard = ({ userData }) => {
   const navigate = useNavigate();
 
-  const { id, firstName, lastName, age, email } = userData;
+  const { id, firstName, lastName, email } = userData;
 
   const onHandleClick = () => navigate(`/users/${id}`);
 
