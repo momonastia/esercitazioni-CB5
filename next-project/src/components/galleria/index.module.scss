@@ -1,0 +1,22 @@
+.Galleria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+}
+
+.Galleria img {
+  object-fit: cover;
+  border-radius: 10px;
+  width: 200px;
+  height: 100px;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 5px 5px 15px 5px #000000;
+}
