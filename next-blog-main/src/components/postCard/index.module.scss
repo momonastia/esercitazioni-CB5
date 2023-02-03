@@ -1,0 +1,24 @@
+.postCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 500px;
+  font-size: 0.8rem;
+
+  h2 {
+    margin: 12px 10px;
+    font-size: 2.3rem;
+  }
+
+  p {
+    margin: 12px 10px;
+  }
+
+  img {
+    transition: 0.35s;
+  }
+
+  img:hover {
+    filter: saturate(1.4) contrast(1.2);
+  }
+}
