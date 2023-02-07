@@ -1,9 +1,8 @@
-import { useContext } from "react";
-import React, { Component } from "react";
+import { createContext } from "react";
 import styles from "./App.module.scss";
 import Counter from "./components";
 
-const TitleContext = React.createContext();
+const TitleContext = createContext();
 
 function App() {
   return (

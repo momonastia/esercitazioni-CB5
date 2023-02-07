@@ -1,12 +1,14 @@
-import { Fragment, useReducer, useContext } from "react";
+import { Fragment, useContext, useReducer } from "react";
 import { reducer, initialState } from "../hooks/reducer";
-import { TitleContext } from "../App.jsx";
+/* import { TitleContext } from "../App.jsx"; */
 import React from "react";
 import styles from "./Counter.module.scss";
 
 const Counter = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   /* dispatch reffers to action parameter of ruducer function in the file reducer.jsx  */
+
+  const title = useContext(TitleContext);
 
   return (
     <Fragment>
