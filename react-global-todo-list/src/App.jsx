@@ -1,6 +1,7 @@
 import styles from "./App.module.scss";
 import { useReducer } from "react";
 import Navbar from "./components/navbar";
+import Image from "./components/image";
 import TodoList from "./components/todolist";
 import initalState from "./store/state";
 import InitailContext from "./store/context";
@@ -12,6 +13,7 @@ function App() {
   return (
     <InitailContext.Provider value={{ state, dispatch }}>
       <div className={styles.App}>
+        <Image />
         <Navbar />
         <TodoList />
       </div>

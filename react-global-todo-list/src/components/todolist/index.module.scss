@@ -1,3 +1,6 @@
 .TodoList {
-  border: 2px solid rgb(114, 250, 128);
+  margin: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
 }

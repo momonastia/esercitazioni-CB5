@@ -1,8 +1,40 @@
 .TodoItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   width: 200px;
   height: 50px;
-  border: 2px solid rgb(114, 200, 250);
+  background-color: white;
+  border-radius: 10px;
   cursor: pointer;
+  font-size: 1rem;
+
+  &:hover {
+    font-size: 1.05rem;
+    transition: all 0.3s;
+    -webkit-box-shadow: 5px 5px 19px 3px rgba(0, 0, 0, 0.46);
+    box-shadow: 5px 5px 19px 3px rgba(0, 0, 0, 0.46);
+    transform: scale(1.03, 1);
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+    color: #886a6a;
+    padding: 10px;
+  }
+
+  .Content {
+    margin: 0 10px;
+  }
+
+  .Buttons {
+    margin: 0 10px;
+    order: 999;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .statusDone {

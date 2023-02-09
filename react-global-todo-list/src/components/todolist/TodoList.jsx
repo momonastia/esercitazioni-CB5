@@ -5,7 +5,7 @@ import InitailContext from "../../store/context";
 
 const TodoList = () => {
   const context = useContext(InitailContext);
-  /*  console.log(context.state.todoList); */
+  console.log("context qui", context);
 
   return (
     <div className={styles.TodoList}>

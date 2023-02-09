@@ -1,0 +1,16 @@
+.BtnDone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 10px;
+  width: 30px;
+  color: #886a6a;
+
+  &:hover {
+    cursor: pointer;
+    color: #191414;
+  }
+}

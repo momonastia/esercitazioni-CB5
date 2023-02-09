@@ -1,5 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,600&display=swap");
+
 body {
-  background-color: rgb(116, 116, 116);
-  color: white;
+  background: rgb(247, 223, 215);
+  background: radial-gradient(
+    circle,
+    rgb(246, 193, 176) 0%,
+    rgb(253, 255, 111) 100%
+  );
+  color: #443636;
   height: 100vh;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
 }
