@@ -1,3 +1,26 @@
 .Navbar {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+
+  .Username {
+    font-size: 2em;
+  }
+
+  .logoutBtn {
+    border-radius: 20px;
+    height: 30px;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    padding: 0 10px;
+    outline: none;
+    background-color: rgb(246, 193, 176);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }

@@ -1,6 +1,6 @@
 import styles from "./index.module.scss";
 import { useContext, useState } from "react";
-import { ApplicationCtx } from "../../App";
+import { ApplicationCtx } from "../../store";
 
 const AddNote = () => {
   /* we put dispatch mode here by useContext as far as we need it inside onHandleSubmit function */
@@ -27,10 +27,11 @@ const AddNote = () => {
 
   return (
     <div className={styles.AddNote}>
-      <h2>Add note</h2>
+      <h2>Create note</h2>
       <form onSubmit={onHandleSubmit}>
         <input
           type="text"
+          className={styles.addField}
           placeholder="Write title here"
           id="title"
           name="title"
@@ -40,6 +41,7 @@ const AddNote = () => {
         />
         <input
           type="text"
+          className={styles.addField}
           placeholder="Write you note here"
           id="content"
           name="content"
@@ -47,7 +49,7 @@ const AddNote = () => {
           onChange={(e) => setContent(() => e.target.value)}
           required
         />
-        <input type="submit" value="Add" />
+        <input type="submit" value="Add" className={styles.addBtn} />
       </form>
     </div>
   );

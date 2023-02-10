@@ -1,6 +1,7 @@
 .NoteList {
   display: flex;
   margin: 20px;
-  flex-direction: column-reverse;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 20px;
 }
